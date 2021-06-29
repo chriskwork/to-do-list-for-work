@@ -1,0 +1,21 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "personal to do list for work",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriskwork/to-do-list-for-work.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chriskwork/to-do-list-for-work/issues"
+  },
+  "homepage": "https://github.com/chriskwork/to-do-list-for-work",
+  "devDependencies": {}
+}
