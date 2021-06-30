@@ -6,6 +6,7 @@ const ul = document.querySelector('ul')
 const msg = document.querySelector('.empty-msg') // showing msg when list is empty
 
 let todos = []
+localStorage.setItem('todo', JSON.stringify(todos))
 
 initList()
 
