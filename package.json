@@ -4,7 +4,8 @@
   "description": "personal to do list for work",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "purgecss": "purgecss --css css/bootstrap.min.css --content /index.html /js/main.js --output ./css/"
   },
   "repository": {
     "type": "git",
