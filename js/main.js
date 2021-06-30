@@ -99,7 +99,6 @@ function addTodo(value) {
   localStorage.setItem('todo', JSON.stringify(todos))
   initList()
   inputForm.value = ''
-  inputForm.focus()
 }
 
 function deleteTodo(id) {
