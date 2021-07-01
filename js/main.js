@@ -6,7 +6,6 @@ const ul = document.querySelector('ul')
 const msg = document.querySelector('.empty-msg') // showing msg when list is empty
 
 let todos = []
-localStorage.setItem('todo', JSON.stringify(todos))
 
 initList()
 
@@ -15,6 +14,7 @@ function initList() {
   todos = JSON.parse(localStorage.getItem('todo'))
 
   if (todos.length === 0) {
+    localStorage.setItem('todo', JSON.stringify(todos))
     if (msg.classList.contains('d-none')) msg.classList.remove('d-none')
   } else {
     msg.classList.add('d-none')
@@ -61,7 +61,7 @@ function showList(list) {
         checkBox.nextElementSibling.nextElementSibling
           .getAttribute('onClick')
           .split('"')[1]
-      )
+      ) // getting checked todo's id
 
       if (checkBox.checked) {
         checkBox.nextElementSibling.classList.add(
@@ -70,9 +70,9 @@ function showList(list) {
         todos.map((todo) => {
           if (checkedItemId === todo.id) {
             todo.checked = true
-            localStorage.setItem('todo', JSON.stringify(todos))
           }
         })
+        localStorage.setItem('todo', JSON.stringify(todos))
       } else {
         checkBox.nextElementSibling.classList.remove(
           'text-decoration-line-through'
@@ -80,9 +80,9 @@ function showList(list) {
         todos.map((todo) => {
           if (checkedItemId === todo.id) {
             todo.checked = false
-            localStorage.setItem('todo', JSON.stringify(todos))
           }
         })
+        localStorage.setItem('todo', JSON.stringify(todos))
       }
     })
   })
