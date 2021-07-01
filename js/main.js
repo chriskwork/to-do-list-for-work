@@ -13,6 +13,11 @@ initList()
 function initList() {
   todos = JSON.parse(localStorage.getItem('todo'))
 
+  if (todos === null) {
+    todos = []
+    localStorage.setItem('todo', JSON.stringify(todos))
+  }
+
   if (todos.length === 0) {
     localStorage.setItem('todo', JSON.stringify(todos))
     if (msg.classList.contains('d-none')) msg.classList.remove('d-none')
